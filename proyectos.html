@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Wilmer Echeverría</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">
+            WILMER ECHEVERRÍA
+            <span>Programador & Desarrollador Web</span>
+        </h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Sobre mí</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenedor sombra">
+        <h2>Mis Proyectos</h2>
+
+        <div class="servicios">
+            <!-- Proyecto 1 -->
+            <article class="servicio">
+                <h3>Portafolio Web Interactivo</h3>
+                <img src="img/fondo-hero.jpg" alt="Captura del Portafolio Web" class="imagen-proyecto">
+                <p>
+                    Proyecto integrador desarrollado para la asignatura de Programación en Sistemas Web. Incluye maquetación semántica con HTML5, estilos avanzados CSS3 y manipulación del DOM con JavaScript.
+                </p>
+                <a href="#" class="boton-proyecto" onclick="mostrarInfoProyecto(event, 'Portafolio Web Interactivo')">Ver Proyecto</a>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="servicio">
+                <h3>Formulario de Contacto Dinámico</h3>
+                <img src="img/fondo-hero.jpg" alt="Captura del Formulario de Contacto" class="imagen-proyecto">
+                <p>
+                    Sistema de interacción y validación en tiempo real en el lado del cliente mediante expresiones regulares (Pattern) y restricciones HTML5.
+                </p>
+                <a href="#" class="boton-proyecto" onclick="mostrarInfoProyecto(event, 'Formulario de Contacto Dinámico')">Ver Proyecto</a>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 WILMER ECHEVERRÍA - Todos los derechos reservados.</p>
+        <p>
+            <a href="https://github.com/wecheverria-ecotec" target="_blank" rel="noopener noreferrer" class="enlace-github">
+                Ver Perfil en GitHub
+            </a>
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

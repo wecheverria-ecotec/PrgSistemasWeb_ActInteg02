@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Programación en Sistemas Web</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">
+            WILMER ECHEVERRÍA
+            <span>Programador & Desarrollador Web</span>
+        </h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Sobre mí</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="proyectos.html">Proyectos</a> 
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="contenido-hero">
+                <h2>Diseño y Desarrollo Web</h2>
+                
+                <img src="img/avatar.png" alt="Avatar de Wilmer Echeverría" class="imagen-perfil">
+
+                <p class="descripcion-personal">
+                    Estudiante apasionado por la programación y la creación de sitios web funcionales, modernos y adaptables a cualquier dispositivo.
+                </p>
+
+                <div class="ubicacion">
+                    <p>Guayaquil - Ecuador</p>
+                </div>
+                <a class="boton" href="#contacto">Contactar</a>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto contenedor sombra">
+            <h2>Contacto</h2>
+
+            <div id="mainDiv" class="mensaje-indicador">
+                Por favor completa tus datos y da clic en enviar.
+            </div>
+
+            <form id="formContacto">
+                <label for="nombre">Nombre:</label>
+                <input placeholder="Tu Nombre" required type="text" id="nombre" name="nombre" 
+                       minlength="3" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" 
+                       title="Ingresa solo letras y espacios">
+
+                <label for="telefono">Teléfono:</label>    
+                <input placeholder="0999999999" required type="text" name="telefono" id="telefono" 
+                       minlength="7" maxlength="10" pattern="[0-9]+" title="Ingresa solo números (ej. 0999999999)">
+
+                <label for="correo">Correo:</label>
+                <input placeholder="correo@ejemplo.com" required type="email" name="email" id="correo">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required minlength="5" maxlength="200"></textarea>  
+
+                <button type="submit" id="btnEnviar">Enviar</button>    
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 WILMER ECHEVERRÍA - Todos los derechos reservados.</p>
+        <p>
+            <a href="https://github.com/wecheverria-ecotec" target="_blank" rel="noopener noreferrer" class="enlace-github">
+                Ver Perfil en GitHub
+            </a>
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

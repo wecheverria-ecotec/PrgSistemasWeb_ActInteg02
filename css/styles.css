@@ -1,0 +1,383 @@
+/* ==========================================
+   1. VARIABLES CSS Y CONFIGURACIÓN GENERAL
+   ========================================== */
+:root {
+    --primario: #0377a8;
+    --secundario: #0097a7;
+    --oscuro: #032040;
+    --blanco: #ffffff;
+    --gris-claro: #f4f4f4;
+    --celeste-brillante: #00B4DB;
+    --celeste-hover: #0083B0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--gris-claro);
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   2. REUTILIZABLES Y CONTENEDORES
+   ========================================== */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sombra {
+    background-color: var(--blanco);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--oscuro);
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================
+   3. ENCABEZADO Y NAVEGACIÓN
+   ========================================== */
+header {
+    background-color: var(--blanco);
+    padding: 2rem 0;
+}
+
+.titulo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.titulo span {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--primario);
+    font-weight: 400;
+}
+
+.nav-bg {
+    background-color: var(--oscuro);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+    color: var(--celeste-brillante);
+}
+
+/* ==========================================
+   4. SECCIÓN HERO (BANNER PRINCIPAL)
+   ========================================== */
+.hero {
+    background-image: linear-gradient(rgba(3, 32, 64, 0.7), rgba(3, 32, 64, 0.7)), url('../img/fondo-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.contenido-hero h2 {
+    color: var(--blanco);
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.imagen-perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--blanco);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 1rem auto;
+    display: block;
+}
+
+.descripcion-personal {
+    color: var(--blanco);
+    max-width: 600px;
+    margin: 1rem auto;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.ubicacion {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--celeste-brillante);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: var(--celeste-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   5. SECCIÓN DE HABILIDADES
+   ========================================== */
+.contenedor-subtitulo {
+    text-align: center;
+}
+
+.subtitulo-habilidades {
+    text-align: center;
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--celeste-brillante);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.lista-habilidades li {
+    background-color: var(--celeste-brillante);
+    color: var(--blanco);
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1.2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 180, 219, 0.3);
+    transition: all 0.3s ease;
+}
+
+.lista-habilidades li:hover {
+    background-color: var(--celeste-hover);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   6. SECCIÓN DE PROYECTOS Y GRILLA
+   ========================================== */
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.servicio {
+    flex: 1 1 300px;
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.imagen-proyecto {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.boton-proyecto {
+    display: inline-block;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton-proyecto:hover {
+    background-color: var(--primario);
+}
+
+/* ==========================================
+   7. FORMULARIO DE CONTACTO
+   ========================================== */
+.contacto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mensaje-indicador {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: var(--primario);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    padding: 1.2rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+button[type="submit"] {
+    background-color: var(--celeste-brillante);
+    color: var(--blanco);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--celeste-hover);
+}
+
+/* ==========================================
+   8. PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.footer {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer .enlace-github {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .enlace-github:hover {
+    color: var(--celeste-brillante);
+    text-decoration: underline;
+}
+
+/* ==========================================
+   9. CORRECCIONES Y JUSTIFICACIÓN
+   ========================================== */
+.seccion-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenido-nosotros h3 {
+    text-align: left;
+    color: var(--oscuro);
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--celeste-brillante);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.contenido-nosotros p,
+.contacto p, 
+main section p,
+.servicio p {
+    text-align: justify !important;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Centrado específico para la ubicación en el Hero */
+.hero .ubicacion,
+.hero .ubicacion p {
+    text-align: center !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

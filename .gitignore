@@ -1,0 +1,5 @@
+.DS_Store
+.phcode.json
+.vscode/
+jsconfig.json
+*.log
