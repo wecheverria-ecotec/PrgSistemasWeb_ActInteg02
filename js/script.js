@@ -21,7 +21,40 @@ function mostrarInfoProyecto(event, nombreProyecto) {
 }
 
 // ==========================================
-// 3. GESTIÓN DEL EVENTO DOM Y FORMULARIO
+// 3. MODO OSCURO (FUNCIONALIDAD ADICIONAL + LOCALSTORAGE)
+// ==========================================
+
+// Clave utilizada para guardar la preferencia de tema en localStorage
+const CLAVE_TEMA = "temaPortafolio";
+
+// Aplica el tema recibido ("oscuro" o "claro") al body y actualiza el texto del botón
+function aplicarTema(tema) {
+    const boton = document.getElementById("btnModoOscuro");
+
+    if (tema === "oscuro") {
+        document.body.classList.add("modo-oscuro");
+        if (boton) {
+            boton.textContent = "☀️ Modo Claro";
+        }
+    } else {
+        document.body.classList.remove("modo-oscuro");
+        if (boton) {
+            boton.textContent = "🌙 Modo Oscuro";
+        }
+    }
+}
+
+// Alterna entre modo claro y modo oscuro, y guarda la preferencia elegida
+function alternarModoOscuro() {
+    const tieneModoOscuro = document.body.classList.contains("modo-oscuro");
+    const nuevoTema = tieneModoOscuro ? "claro" : "oscuro";
+
+    aplicarTema(nuevoTema);
+    localStorage.setItem(CLAVE_TEMA, nuevoTema);
+}
+
+// ==========================================
+// 4. GESTIÓN DEL EVENTO DOM Y FORMULARIO
 // ==========================================
 document.addEventListener("DOMContentLoaded", function() {
     

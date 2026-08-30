@@ -381,3 +381,62 @@ main section p,
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/* ==========================================
+   10. BOTÓN DE MODO OSCURO
+   ========================================== */
+.boton-modo-oscuro {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-modo-oscuro:hover {
+    background-color: var(--blanco);
+    color: var(--oscuro);
+}
+
+/* ==========================================
+   11. MODO OSCURO (TEMA ALTERNATIVO)
+   ========================================== */
+body.modo-oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro .sombra,
+body.modo-oscuro .servicio {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro .titulo {
+    color: var(--celeste-brillante);
+}
+
+body.modo-oscuro .mensaje-indicador {
+    color: var(--celeste-brillante);
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444444;
+}
+
+body.modo-oscuro .footer {
+    background-color: #000000;
+}
