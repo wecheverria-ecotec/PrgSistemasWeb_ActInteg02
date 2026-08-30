@@ -99,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const telefono = document.getElementById("telefono")?.value.trim();
             const correo = document.getElementById("correo")?.value.trim();
             const mensaje = document.getElementById("mensaje")?.value.trim();
-
+            
+            // Validación: nombre, correo y mensaje no deben estar vacíos
             if (!nombre || !telefono || !correo || !mensaje) {
                 alert("⚠️ Por favor, llena todos los campos. No se permiten entradas vacías.");
                 return;
